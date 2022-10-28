@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Meera"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-28 10:17:01 AM"/>
+        <attribute name="created" value="TWVlcmE7TEFQVE9QLUozMjdMSlI2OzIwMjItMTAtMjg7MDk6MjM6NTMgQU07Mjc4Mw=="/>
+        <attribute name="edited" value="TWVlcmE7TEFQVE9QLUozMjdMSlI2OzIwMjItMTAtMjg7MTA6MTc6MDEgQU07MjsyODgw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="rollnumber" type="String" array="False" size=""/>
+            <declare name="name" type="String" array="False" size=""/>
+            <declare name="address" type="String" array="False" size=""/>
+            <declare name="bloodgroup" type="String" array="False" size=""/>
+            <declare name="phone" type="Integer" array="False" size=""/>
+            <declare name="dept" type="String" array="False" size=""/>
+            <declare name="room" type="String" array="False" size=""/>
+            <declare name="sem" type="String" array="False" size=""/>
+            <declare name="Sub" type="String" array="False" size=""/>
+            <declare name="mark" type="Integer" array="False" size=""/>
+            <declare name="mark2" type="Integer" array="False" size=""/>
+            <declare name="total" type="Integer" array="False" size=""/>
+            <declare name="average" type="Integer" array="False" size=""/>
+            <output expression="&quot; Enter Name &quot;" newline="True"/>
+            <input variable="name"/>
+            <output expression="&quot; Enter Semester&quot;" newline="True"/>
+            <input variable="sem"/>
+            <declare name="subc" type="String" array="False" size=""/>
+            <output expression="&quot;Enter subject code&quot;" newline="True"/>
+            <input variable="subc"/>
+            <output expression="&quot; Enter Marks of Sub 1&quot;" newline="True"/>
+            <input variable="mark"/>
+            <output expression="&quot;Enter Marks of Sub 2&quot;" newline="True"/>
+            <input variable="mark2"/>
+            <assign variable="total" expression="mark + mark2"/>
+            <assign variable="average" expression="total/2"/>
+            <comment text="Final answers&#13;&#10;"/>
+            <output expression="&quot;total is - &quot; &amp; total" newline="True"/>
+            <output expression="&quot;average is - &quot; &amp; average" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
