@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="CB.EN.U4CYS22042"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-04 09:21:47 AM"/>
+        <attribute name="created" value="Q0IuRU4uVTRDWVMyMjA0MjsyMDIyMjNNQVlDMDA3OTsyMDIyLTExLTA0OzA5OjA4OjQzIEFNOzMwNjg="/>
+        <attribute name="edited" value="Q0IuRU4uVTRDWVMyMjA0MjsyMDIyMjNNQVlDMDA3OTsyMDIyLTExLTA0OzA5OjIxOjQ3IEFNOzE7MzE3NQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Add data you want displayed first in order "/>
+            <declare name="c" type="Integer" array="False" size=""/>
+            <declare name="f" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter temperature in Celcius&quot;" newline="True"/>
+            <input variable="c"/>
+            <assign variable="f" expression="(9/5 * C)+ 32"/>
+            <output expression="&quot;The temperature in Farenheit is &quot;&amp;f" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

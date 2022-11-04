@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="CB.EN.U4CYS22042"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-04 10:42:31 AM"/>
+        <attribute name="created" value="Q0IuRU4uVTRDWVMyMjA0MjsyMDIyMjNNQVlDMDA3OTsyMDIyLTExLTA0OzA5OjUzOjA4IEFNOzMwNjk="/>
+        <attribute name="edited" value="Q0IuRU4uVTRDWVMyMjA0MjsyMDIyMjNNQVlDMDA3OTsyMDIyLTExLTA0OzEwOjQyOjMxIEFNOzU7MzE2Nw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Swapping numbers&#13;&#10;"/>
+            <declare name="a" type="Integer" array="False" size=""/>
+            <declare name="b" type="Integer" array="False" size=""/>
+            <output expression="&quot; Initial value of A &quot;" newline="True"/>
+            <input variable="a"/>
+            <output expression="&quot; Initial value of B&quot;" newline="True"/>
+            <input variable="b"/>
+            <comment text="Taking another a for ease&#13;&#10;"/>
+            <assign variable="a" expression="a*b"/>
+            <assign variable="b" expression="a/ b"/>
+            <assign variable="a" expression="a/b"/>
+            <output expression="&quot; The swapped values are &quot;&amp; a &amp; &quot;,&quot;&amp; b" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

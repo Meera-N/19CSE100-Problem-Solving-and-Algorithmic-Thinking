@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="CB.EN.U4CYS22042"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-04 10:56:54 AM"/>
+        <attribute name="created" value="Q0IuRU4uVTRDWVMyMjA0MjsyMDIyMjNNQVlDMDA3OTsyMDIyLTExLTA0OzEwOjUxOjI4IEFNOzMwNjE="/>
+        <attribute name="edited" value="Q0IuRU4uVTRDWVMyMjA0MjsyMDIyMjNNQVlDMDA3OTsyMDIyLTExLTA0OzEwOjU2OjU0IEFNOzE7MzE3Mw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="q = a"/>
+            <declare name="a" type="Integer" array="False" size=""/>
+            <comment text="d = b"/>
+            <declare name="b" type="Integer" array="False" size=""/>
+            <declare name="c" type="Integer" array="False" size=""/>
+            <declare name="r" type="Integer" array="False" size=""/>
+            <output expression="&quot;Give value for A&quot;" newline="True"/>
+            <input variable="a"/>
+            <output expression="&quot;Give value for B&quot;" newline="True"/>
+            <input variable="b"/>
+            <assign variable="c" expression="a/b"/>
+            <assign variable="r" expression="a-(b*c)"/>
+            <output expression="&quot;The mod value of  A and B is &quot;&amp;r" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

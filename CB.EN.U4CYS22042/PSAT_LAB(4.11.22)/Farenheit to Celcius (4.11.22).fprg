@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="CB.EN.U4CYS22042"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-04 09:25:28 AM"/>
+        <attribute name="created" value="Q0IuRU4uVTRDWVMyMjA0MjsyMDIyMjNNQVlDMDA3OTsyMDIyLTExLTA0OzA5OjA4OjQzIEFNOzMwNjg="/>
+        <attribute name="edited" value="Q0IuRU4uVTRDWVMyMjA0MjsyMDIyMjNNQVlDMDA3OTsyMDIyLTExLTA0OzA5OjI1OjI4IEFNOzI7MzE3OQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="f" type="Integer" array="False" size=""/>
+            <declare name="c" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter temperature in Farenheit&quot;" newline="True"/>
+            <input variable="f"/>
+            <comment text="Reversed the formula"/>
+            <assign variable="c" expression="(f-32)* 5/9"/>
+            <comment text="Theres no space btw &amp;"/>
+            <output expression="&quot;The temperature in celcius is &quot;&amp;c" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
