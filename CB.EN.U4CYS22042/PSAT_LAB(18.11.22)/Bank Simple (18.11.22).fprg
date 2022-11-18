@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="CB.EN.U4CYS22042"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-18 09:37:47 AM"/>
+        <attribute name="created" value="Q0IuRU4uVTRDWVMyMjA0MjsyMDIyMjNNQVlDMDA3OTsyMDIyLTExLTE4OzA5OjA0OjMwIEFNOzMwNjU="/>
+        <attribute name="edited" value="Q0IuRU4uVTRDWVMyMjA0MjsyMDIyMjNNQVlDMDA3OTsyMDIyLTExLTE4OzA5OjM3OjQ3IEFNOzE7MzE4Nw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="acn, pin, bal, amn" type="Integer" array="False" size=""/>
+            <declare name="nam" type="String" array="False" size=""/>
+            <output expression="&quot;Please enter your name&quot;" newline="True"/>
+            <input variable="nam"/>
+            <output expression="&quot;Welcome to FG Bank &quot;&amp;nam&amp;&quot; ! Please enter your account number for withdrawal&quot;" newline="True"/>
+            <input variable="acn"/>
+            <comment text="Any account with no lower than 12345 will not be able to withdraw"/>
+            <if expression="acn&gt;12345">
+                <then>
+                    <output expression="&quot; How much would you like to withdraw? &quot;" newline="True"/>
+                    <input variable="amn"/>
+                    <if expression="amn&gt;1000">
+                        <then>
+                            <output expression="&quot;Please contact the bank as amount is greater than maximum withdrawal limit, sorry for the inconvience.&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;Your amount of &quot;&amp;amn&amp;&quot; will be withdrawn. Please enter your pin&quot;" newline="True"/>
+                            <comment text="pin is 1234"/>
+                            <input variable="pin"/>
+                            <if expression="pin=1234">
+                                <then>
+                                    <comment text="For ease taken every accounts balance as 10000"/>
+                                    <assign variable="bal" expression="10000-amn"/>
+                                    <output expression="&quot;Your amount will be withdrawn, the balance is &quot;&amp;bal&amp;&quot;. Thank you for using FG Bank!&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <output expression="&quot;Incorrect pin &quot;" newline="True"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <output expression="&quot;We are sorry, but you cannot withdraw cash as minimum balance will not be satisfied&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

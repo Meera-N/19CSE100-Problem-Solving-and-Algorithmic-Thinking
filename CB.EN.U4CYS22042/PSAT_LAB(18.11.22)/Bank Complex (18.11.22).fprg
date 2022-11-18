@@ -1,0 +1,126 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="CB.EN.U4CYS22042"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-18 10:11:13 AM"/>
+        <attribute name="created" value="Q0IuRU4uVTRDWVMyMjA0MjsyMDIyMjNNQVlDMDA3OTsyMDIyLTExLTE4OzA5OjA0OjMwIEFNOzMwNjU="/>
+        <attribute name="edited" value="Q0IuRU4uVTRDWVMyMjA0MjsyMDIyMjNNQVlDMDA3OTsyMDIyLTExLTE4OzEwOjExOjEzIEFNOzI7MzE2NQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="acn, pin, bal, amn, opt, npin, nnpin" type="Integer" array="False" size=""/>
+            <declare name="nam" type="String" array="False" size=""/>
+            <output expression="&quot;Please enter your name&quot;" newline="True"/>
+            <input variable="nam"/>
+            <output expression="&quot;Welcome to FG Bank &quot;&amp;nam&amp;&quot; ! Please enter your account number for further proccedings&quot;" newline="True"/>
+            <input variable="acn"/>
+            <output expression="&quot;How can we help you &quot;&amp;nam&amp;&quot;?&quot;" newline="True"/>
+            <output expression="&quot;To check balance enter 1 &quot;" newline="True"/>
+            <output expression="&quot;To withdraw money enter 2&quot;" newline="True"/>
+            <output expression="&quot;To deposit money enter 3&quot;" newline="True"/>
+            <output expression="&quot;To change pin enter 4&quot;" newline="True"/>
+            <input variable="opt"/>
+            <comment text="pin is always 1234&#13;&#10;"/>
+            <if expression="opt=2">
+                <then>
+                    <if expression="acn&gt;12345">
+                        <then>
+                            <output expression="&quot; How much would you like to withdraw? &quot;" newline="True"/>
+                            <input variable="amn"/>
+                            <if expression="amn&gt;1000">
+                                <then>
+                                    <output expression="&quot;Please contact the bank as amount is greater than maximum withdrawal limit, sorry for the inconvience.&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <output expression="&quot;Your amount of &quot;&amp;amn&amp;&quot; will be withdrawn. Please enter your pin&quot;" newline="True"/>
+                                    <comment text="pin is 1234"/>
+                                    <input variable="pin"/>
+                                    <if expression="pin=1234">
+                                        <then>
+                                            <comment text="For ease taken every accounts balance as 10000"/>
+                                            <assign variable="bal" expression="10000-amn"/>
+                                            <output expression="&quot;Your amount will be withdrawn, the balance is &quot;&amp;bal&amp;&quot;. Thank you for using FG Bank!&quot;" newline="True"/>
+                                        </then>
+                                        <else>
+                                            <output expression="&quot;Incorrect pin &quot;" newline="True"/>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </then>
+                        <else>
+                            <output expression="&quot;We are sorry, but you cannot withdraw cash as minimum balance will not be satisfied&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <if expression="opt=2">
+                        <then>
+                            <output expression="&quot;How much would you like to deposit?&quot;" newline="True"/>
+                            <input variable="amn"/>
+                            <output expression="&quot;Please enter your pin&quot;" newline="True"/>
+                            <input variable="pin"/>
+                            <if expression="pin=1234">
+                                <then>
+                                    <output expression="&quot;Please insert amount of &quot;&amp;amn&amp;&quot; into slot&quot;" newline="True"/>
+                                    <assign variable="bal" expression="10000+amn"/>
+                                    <output expression="&quot;Your Balance is &quot;&amp;Bal&amp;&quot;. Thank you for using FG Bank!&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <output expression="&quot;Incorrect pin &quot;" newline="True"/>
+                                    <comment text="could have looped back"/>
+                                </else>
+                            </if>
+                            <breakpoint expression="" always="True"/>
+                        </then>
+                        <else>
+                            <if expression="opt=1">
+                                <then>
+                                    <output expression="&quot; The balance for the account number&quot;&amp;acn&amp;&quot; is 10000&quot;" newline="True"/>
+                                    <output expression="&quot; Thank you for using FG Bank!&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <if expression="opt=4">
+                                        <then>
+                                            <output expression="&quot;Please enter original pin&quot;" newline="True"/>
+                                            <if expression="pin=1234">
+                                                <then>
+                                                    <output expression="&quot;Enter new pin&quot;" newline="True"/>
+                                                    <input variable="npin"/>
+                                                    <output expression="&quot;Please enter new pin again&quot;" newline="True"/>
+                                                    <input variable="nnpin"/>
+                                                    <if expression="nnpin= npin">
+                                                        <then>
+                                                            <output expression="&quot;Your pin has been changed. Thank you for using FG Bank!&quot;" newline="True"/>
+                                                        </then>
+                                                        <else>
+                                                            <output expression="&quot;Pins do not match, Please try again&quot;" newline="True"/>
+                                                            <comment text="could have looped back"/>
+                                                        </else>
+                                                    </if>
+                                                </then>
+                                                <else>
+                                                    <output expression="&quot;Incorrect pin &quot;" newline="True"/>
+                                                </else>
+                                            </if>
+                                        </then>
+                                        <else>
+                                            <output expression="&quot;Please choose from available options&quot;" newline="True"/>
+                                            <comment text="could have looped"/>
+                                        </else>
+                                    </if>
+                                    <breakpoint expression="" always="True"/>
+                                </else>
+                            </if>
+                            <breakpoint expression="" always="True"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <comment text="Any account with no lower than 12345 will not be able to withdraw"/>
+        </body>
+    </function>
+</flowgorithm>
