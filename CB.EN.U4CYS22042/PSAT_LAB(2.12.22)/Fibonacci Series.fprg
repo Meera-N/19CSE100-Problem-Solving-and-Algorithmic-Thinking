@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="CB.EN.U4CYS22042"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-02 10:24:07 AM"/>
+        <attribute name="created" value="Q0IuRU4uVTRDWVMyMjA0MjsyMDIyMjNNQVlDMDA3OTsyMDIyLTEyLTAyOzEwOjAxOjEyIEFNOzMwNDg="/>
+        <attribute name="edited" value="Q0IuRU4uVTRDWVMyMjA0MjsyMDIyMjNNQVlDMDA3OTsyMDIyLTEyLTAyOzEwOjI0OjA3IEFNOzE7MzE2NQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="givnum, num, sum, times" type="Integer" array="False" size=""/>
+            <input variable="givnum"/>
+            <assign variable="num" expression="1"/>
+            <assign variable="sum" expression="0"/>
+            <output expression="&quot; The fibonacci series : &quot;" newline="True"/>
+            <comment text="given 0, 0 since a computer cant approximate 0+0 =1"/>
+            <output expression="&quot;0&quot;" newline="True"/>
+            <output expression="&quot;0&quot;" newline="True"/>
+            <comment text="when it was given num&lt; it only went till loop reached 10 in value.. but when we gave sum, we got it"/>
+            <while expression="sum&lt;=givnum">
+                <assign variable="sum" expression="num+sum"/>
+                <output expression="sum" newline="True"/>
+                <assign variable="num" expression="num+sum"/>
+                <output expression="num" newline="True"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>
