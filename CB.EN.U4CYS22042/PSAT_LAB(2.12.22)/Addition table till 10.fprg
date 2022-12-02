@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="CB.EN.U4CYS22042"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-02 09:49:15 AM"/>
+        <attribute name="created" value="Q0IuRU4uVTRDWVMyMjA0MjsyMDIyMjNNQVlDMDA3OTsyMDIyLTEyLTAyOzA5OjA0OjU4IEFNOzMwNjk="/>
+        <attribute name="edited" value="Q0IuRU4uVTRDWVMyMjA0MjsyMDIyMjNNQVlDMDA3OTsyMDIyLTEyLTAyOzA5OjQ5OjE1IEFNOzM7MzE4MQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="num, sum, givnum, i" type="Integer" array="False" size=""/>
+            <assign variable="sum" expression="0"/>
+            <assign variable="givnum" expression="10"/>
+            <assign variable="i" expression="1"/>
+            <while expression="i&lt;=givnum">
+                <comment text="there should be 2 loops&#13;&#10;"/>
+                <output expression="&quot;Addition table of &quot;&amp;i&amp;&quot; :&quot;" newline="True"/>
+                <assign variable="num" expression="0"/>
+                <while expression="num&lt;=10">
+                    <assign variable="sum" expression="num+i"/>
+                    <output expression="num&amp;&quot; + &quot; &amp;i&amp; &quot; = &quot; &amp;sum" newline="True"/>
+                    <assign variable="num" expression="num+1"/>
+                </while>
+                <assign variable="i" expression="i+1"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>

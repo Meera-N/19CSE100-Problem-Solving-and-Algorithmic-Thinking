@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="CB.EN.U4CYS22042"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-02 09:22:44 AM"/>
+        <attribute name="created" value="Q0IuRU4uVTRDWVMyMjA0MjsyMDIyMjNNQVlDMDA3OTsyMDIyLTEyLTAyOzA5OjA0OjU4IEFNOzMwNjk="/>
+        <attribute name="edited" value="Q0IuRU4uVTRDWVMyMjA0MjsyMDIyMjNNQVlDMDA3OTsyMDIyLTEyLTAyOzA5OjIyOjQ0IEFNOzY7MzE3Nw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="num, pro, givnum" type="Integer" array="False" size=""/>
+            <comment text="given 3 values as num, N and pro"/>
+            <input variable="givnum"/>
+            <assign variable="num" expression="1"/>
+            <assign variable="pro" expression="1"/>
+            <if expression="givnum&gt;=0">
+                <then>
+                    <while expression="num&lt;=givnum">
+                        <assign variable="pro" expression="num*pro"/>
+                        <assign variable="num" expression="num+1"/>
+                    </while>
+                    <output expression="&quot;The factorial of &quot;&amp;givnum&amp;&quot; is &quot;&amp;pro" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Factorial exists for only positive numbers, please retry with a positive integer&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
