@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="CB.EN.U4CYS22042"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-02 10:57:19 AM"/>
+        <attribute name="created" value="Q0IuRU4uVTRDWVMyMjA0MjsyMDIyMjNNQVlDMDA3OTsyMDIyLTEyLTAyOzEwOjQ2OjE4IEFNOzMwNjM="/>
+        <attribute name="edited" value="Q0IuRU4uVTRDWVMyMjA0MjsyMDIyMjNNQVlDMDA3OTsyMDIyLTEyLTAyOzEwOjQ2OjI0IEFNOzE7Q0IuRU4uVTRDWVMyMjA0MjsyMDIyMjNNQVlDMDA3OTsyMDIyLTEyLTAyOzEwOjMxOjU4IEFNOzYyODg="/>
+        <attribute name="edited" value="Q0IuRU4uVTRDWVMyMjA0MjsyMDIyMjNNQVlDMDA3OTsyMDIyLTEyLTAyOzEwOjU3OjE5IEFNOzE7MzE3NA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="givnum, num, res" type="Integer" array="False" size=""/>
+            <input variable="givnum"/>
+            <assign variable="res" expression="0"/>
+            <assign variable="num" expression="1"/>
+            <output expression="&quot; The prime numbers below &quot;&amp;givnum&amp;&quot; is:&quot;" newline="True"/>
+            <comment text="prime numbers except 2 and 3 can be given as consecutive sums of formula p = 6N -+ 1"/>
+            <if expression="givnum&gt;=2">
+                <then>
+                    <output expression="&quot;2&quot;" newline="True"/>
+                    <if expression="givnum&gt;=3">
+                        <then>
+                            <output expression="&quot;3&quot;" newline="True"/>
+                            <while expression="givnum&gt;=res">
+                                <assign variable="res" expression="(6*num)-1"/>
+                                <if expression="res&lt;=givnum">
+                                    <then>
+                                        <output expression="res" newline="True"/>
+                                    </then>
+                                    <else/>
+                                </if>
+                                <assign variable="res" expression="(6*num)+1"/>
+                                <if expression="res&lt;=givnum">
+                                    <then>
+                                        <output expression="res" newline="True"/>
+                                    </then>
+                                    <else/>
+                                </if>
+                                <assign variable="num" expression="num+1"/>
+                            </while>
+                        </then>
+                        <else/>
+                    </if>
+                </then>
+                <else/>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
