@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Meera"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-10 12:00:16 AM"/>
+        <attribute name="created" value="TWVlcmE7TEFQVE9QLUozMjdMSlI2OzIwMjItMTItMDk7MTA6NDg6MzkgQU07Mjc4Nw=="/>
+        <attribute name="edited" value="TWVlcmE7TEFQVE9QLUozMjdMSlI2OzIwMjItMTItMTA7MTI6MDA6MTYgQU07MjsyODcz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="index" type="Integer" array="False" size=""/>
+            <declare name="n" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter the number of students&quot;" newline="True"/>
+            <input variable="n"/>
+            <comment text="taking all values as individual arrays"/>
+            <declare name="Mark1" type="Integer" array="True" size="n"/>
+            <declare name="Mark2" type="Integer" array="True" size="n"/>
+            <declare name="Mark3" type="Integer" array="True" size="n"/>
+            <declare name="Avg" type="Integer" array="True" size="n"/>
+            <declare name="Tot" type="Integer" array="True" size="n"/>
+            <declare name="rn" type="Integer" array="True" size="n"/>
+            <for variable="index" start="0" end="n-1" direction="inc" step="1">
+                <output expression="&quot;Enter roll number of student&quot;" newline="True"/>
+                <input variable="rn[index]"/>
+                <output expression="&quot;Enter the marks for first subject&quot;" newline="True"/>
+                <input variable="mark1[index]"/>
+                <output expression="&quot;Enter the marks for second subject&quot;" newline="True"/>
+                <input variable="mark2[index]"/>
+                <output expression="&quot;Enter the marks for third subject&quot;" newline="True"/>
+                <input variable="mark3[index]"/>
+                <assign variable="tot[index]" expression="mark1[index]+mark2[index]+mark3[index]"/>
+                <assign variable="avg[index]" expression="tot[index]/3"/>
+            </for>
+            <for variable="index" start="0" end="n-1" direction="inc" step="1">
+                <output expression="&quot;For student with roll number &quot;&amp;rn[index]" newline="True"/>
+                <output expression="&quot;Marks are : &quot;" newline="True"/>
+                <output expression="mark1[index]" newline="True"/>
+                <output expression="mark2[index]" newline="True"/>
+                <output expression="mark3[index]" newline="True"/>
+                <output expression="&quot;Total : &quot;&amp;tot[index]" newline="True"/>
+                <output expression="&quot;Average : &quot;&amp;avg[index]" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

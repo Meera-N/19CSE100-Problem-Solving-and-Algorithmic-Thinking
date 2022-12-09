@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Meera"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-09 11:59:29 PM"/>
+        <attribute name="created" value="TWVlcmE7TEFQVE9QLUozMjdMSlI2OzIwMjItMTItMDk7MDk6MTM6NTggQU07Mjc4OA=="/>
+        <attribute name="edited" value="TWVlcmE7TEFQVE9QLUozMjdMSlI2OzIwMjItMTItMDk7MTE6NTk6MjkgUE07MzsyOTE0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="largen is the largest number&#13;&#10;"/>
+            <declare name="index, largen" type="Integer" array="False" size=""/>
+            <declare name="values" type="Integer" array="True" size="5"/>
+            <declare name="value" type="Integer" array="False" size=""/>
+            <for variable="index" start="0" end="4" direction="inc" step="1">
+                <output expression="&quot;Enter the values to be stored in index=[&quot;&amp;index&amp;&quot;]&quot;" newline="True"/>
+                <input variable="value"/>
+                <assign variable="values[index]" expression="value"/>
+            </for>
+            <output expression="&quot;Array contents :&quot;" newline="True"/>
+            <for variable="index" start="0" end="4" direction="inc" step="1">
+                <output expression="&quot;Array content values for [&quot;&amp;index&amp;&quot;] is &quot;&amp;values[index]" newline="True"/>
+            </for>
+            <output expression="&quot;The largest element is :&quot;" newline="True"/>
+            <comment text="using if statement to max"/>
+            <if expression="values[0]&gt;values[1]&amp;&amp;values[0]&gt;values[2]&amp;&amp;values[0]&gt;values[3]&amp;&amp;values[0]&gt;values[4]">
+                <then>
+                    <output expression="Values[0]" newline="True"/>
+                </then>
+                <else>
+                    <if expression="values[1]&gt;values[0]&amp;&amp;values[1]&gt;values[2]&amp;&amp;values[1]&gt;values[3]&amp;&amp;values[1]&gt;values[4]">
+                        <then>
+                            <output expression="Values[1]" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="values[2]&gt;values[1]&amp;&amp;values[2]&gt;values[0]&amp;&amp;values[2]&gt;values[3]&amp;&amp;values[2]&gt;values[4]">
+                                <then>
+                                    <output expression="values[2]" newline="True"/>
+                                </then>
+                                <else>
+                                    <if expression="values[4]&gt;values[0]&amp;&amp;values[4]&gt;values[2]&amp;&amp;values[4]&gt;values[3]&amp;&amp;values[4]&gt;values[1]">
+                                        <then>
+                                            <output expression="values[4]" newline="True"/>
+                                        </then>
+                                        <else>
+                                            <output expression="values[3]" newline="True"/>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

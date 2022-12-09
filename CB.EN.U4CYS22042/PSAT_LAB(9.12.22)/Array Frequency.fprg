@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="chennavaram arnav"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-10 12:01:56 AM"/>
+        <attribute name="created" value="Y2hlbm5hdmFyYW0gYXJuYXY7QVJOQVZST0ctQ0xTMlFPOzIwMjItMTItMDk7MTA6MjE6MDEgQU07NDA2NQ=="/>
+        <attribute name="edited" value="Y2hlbm5hdmFyYW0gYXJuYXY7QVJOQVZST0ctQ0xTMlFPOzIwMjItMTItMDk7MTA6MzU6MTIgQU07MTs0MTgw"/>
+        <attribute name="edited" value="SFA7REVTS1RPUC1MM1JERUtGOzIwMjItMTItMDk7MTE6MjU6MDQgQU07NzsyNjAw"/>
+        <attribute name="edited" value="QW1pdGEgTmFyYXlhbmFuO0RFU0tUT1AtQU5ISjg1NTsyMDIyLTEyLTA5OzExOjU0OjQzIFBNOzI7Mzg2OA=="/>
+        <attribute name="edited" value="TWVlcmE7TEFQVE9QLUozMjdMSlI2OzIwMjItMTItMTA7MTI6MDE6NTYgQU07MTsyODc3"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Numbers" type="Integer" array="True" size="10"/>
+            <declare name="Frequency, index, value" type="Integer" array="False" size=""/>
+            <declare name="number" type="Integer" array="False" size=""/>
+            <for variable="index" start="0" end="9" direction="inc" step="1">
+                <output expression="&quot;Enter &quot;&amp;index+1&amp;&quot; value&quot;" newline="True"/>
+                <input variable="Number"/>
+                <assign variable="Numbers[index]" expression="number"/>
+            </for>
+            <output expression="&quot;Enter the given value for which the frequency should be found&quot;" newline="True"/>
+            <input variable="value"/>
+            <assign variable="frequency" expression="0"/>
+            <comment text="using loop to find element with highest frequency"/>
+            <for variable="index" start="0" end="9" direction="inc" step="1">
+                <if expression="Numbers[index]=value">
+                    <then>
+                        <assign variable="frequency" expression="frequency+1"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <output expression="&quot;The required frequency of the given value in array is &quot;&amp;frequency" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
