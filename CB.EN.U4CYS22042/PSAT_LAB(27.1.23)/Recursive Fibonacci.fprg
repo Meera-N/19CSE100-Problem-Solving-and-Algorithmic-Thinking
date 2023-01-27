@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Meera"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-01-27 07:33:09 PM"/>
+        <attribute name="created" value="TWVlcmE7TEFQVE9QLUozMjdMSlI2OzIwMjMtMDEtMjc7MDc6MTc6MDUgUE07Mjc5Ng=="/>
+        <attribute name="edited" value="TWVlcmE7TEFQVE9QLUozMjdMSlI2OzIwMjMtMDEtMjc7MDc6MzM6MDkgUE07MTsyOTA2"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="num, f0, f1" type="Integer" array="False" size=""/>
+            <output expression="&quot;How many digits of the Fibonacci series do you want ?&quot;" newline="True"/>
+            <input variable="num"/>
+            <assign variable="f0" expression="0"/>
+            <assign variable="f1" expression="1"/>
+            <comment text="function is called"/>
+            <call expression="Rfib(num, f0, f1)"/>
+        </body>
+    </function>
+    <function name="Rfib" type="None" variable="">
+        <parameters>
+            <parameter name="num" type="Integer" array="False"/>
+            <parameter name="f0" type="Integer" array="False"/>
+            <parameter name="f1" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <comment text="order of calling matters"/>
+            <declare name="temp" type="Integer" array="False" size=""/>
+            <if expression="Num&gt;0">
+                <then>
+                    <output expression="f0" newline="True"/>
+                    <assign variable="temp" expression="f0"/>
+                    <assign variable="f0" expression="f1"/>
+                    <assign variable="f1" expression="f1 + temp"/>
+                    <assign variable="num" expression="num-1"/>
+                    <comment text="has to have same order"/>
+                    <call expression="Rfib(num, f0, f1)"/>
+                </then>
+                <else>
+                    <comment text="end is given"/>
+                    <output expression="&quot;Series has ended&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

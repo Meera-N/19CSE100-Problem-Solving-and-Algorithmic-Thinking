@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Meera"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-01-27 07:16:55 PM"/>
+        <attribute name="created" value="TWVlcmE7TEFQVE9QLUozMjdMSlI2OzIwMjMtMDEtMjc7MDc6MDY6MjYgUE07Mjc5Nw=="/>
+        <attribute name="edited" value="TWVlcmE7TEFQVE9QLUozMjdMSlI2OzIwMjMtMDEtMjc7MDc6MTY6NTUgUE07MjsyOTA5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="num" type="Integer" array="False" size=""/>
+            <comment text="N is input from user"/>
+            <output expression="&quot;Enter number of which factorial should be found&quot;" newline="True"/>
+            <input variable="num"/>
+            <comment text="All arguments are given within brackets"/>
+            <output expression="&quot;The factorial is &quot;&amp;Rpro(num)" newline="True"/>
+        </body>
+    </function>
+    <function name="Rpro" type="Integer" variable="pro">
+        <parameters>
+            <parameter name="num" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="pro" type="Integer" array="False" size=""/>
+            <if expression="num==1">
+                <then>
+                    <assign variable="pro" expression="1"/>
+                </then>
+                <else>
+                    <comment text="This creates an internal loop, which ends at true condition"/>
+                    <assign variable="pro" expression="num * Rpro(num-1)"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
